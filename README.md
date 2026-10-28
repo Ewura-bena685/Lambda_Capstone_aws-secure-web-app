@@ -13,6 +13,7 @@ The architecture follows AWS best practices for cloud security and resilience, f
 * **Identity & Access Management (IAM):** Granular, least-privilege IAM roles and policies.
 * **Network Security:** Amazon Virtual Private Cloud (VPC) with segregated public and private subnets across multiple Availability Zones, custom Security Groups, and Network Access Control Lists (NACLs).
 * **Compute & Serverless:** Containerized or serverless microservices powered by AWS Lambda and Amazon EC2/ECS.
+
 * **Application Security & Delivery:** Amazon CloudFront CDN with AWS Web Application Firewall (WAF) integration for protection against common web exploits and DDoS attacks.
 * **Storage & Artifact Management:** Secure Amazon S3 buckets with default server-side encryption (SSE-S3/KMS), bucket policies, and versioning.
 * **Observability & Auditability:** Centralized logging and threat monitoring via Amazon CloudWatch, AWS CloudTrail, and Amazon GuardDuty.
