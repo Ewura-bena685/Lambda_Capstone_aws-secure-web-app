@@ -30,3 +30,7 @@ The architecture follows AWS best practices for cloud security and resilience, f
 ├── LICENSE               # License information
 └── README.md             # Project documentation
 ```
+##  Documentation & Resources
+
+* **Deployment Strategy & Pipeline Plan:** [AWS Secure Web Application Deployment Plan (Google Doc)](https://docs.google.com/document/d/1shiG8Ca_V-v7gwLCpTrrqgjxts-xXm3IgzNmnP11DUs/edit?usp=sharing)
+*  **Architecture & Project Docs:** Located in the [`docs/`](./docs) directory.
