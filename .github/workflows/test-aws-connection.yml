@@ -15,7 +15,7 @@ jobs:
       id-token: write   # required for OIDC
       contents: read
     steps:
-      # Debug: show what GitHub tells AWS about this run (token itself is NOT printed)
+      # Debug 1: what GitHub tells AWS about this run (the token itself is NOT printed)
       - name: Show OIDC claims
         run: |
           python3 - <<'PY'
@@ -30,11 +30,19 @@ jobs:
               print(key + ": " + str(claims.get(key)))
           PY
 
+      # Debug 2: what is saved in the GitHub variables (brackets reveal stray spaces)
+      - name: Show saved variables
+        run: |
+          echo "AWS_ROLE_ARN=[${{ vars.AWS_ROLE_ARN }}]"
+          echo "AWS_REGION=[${{ vars.AWS_REGION }}]"
+
+      # Role ARN typed directly (not from the variable), so we can tell
+      # whether the variable or the AWS trust policy is the problem
       - name: Configure AWS Credentials (OIDC)
         uses: aws-actions/configure-aws-credentials@v4
         with:
-          role-to-assume: ${{ vars.AWS_ROLE_ARN }}
-          aws-region: ${{ vars.AWS_REGION }}
+          role-to-assume: arn:aws:iam::842053011488:role/GitHub-Actions-Role
+          aws-region: us-east-1
 
       - name: Who am I?
         run: aws sts get-caller-identity
