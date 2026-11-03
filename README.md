@@ -1,6 +1,6 @@
 # Lambda Capstone Project: AWS Secure Web Application
 
-A secure, scalable, and automated cloud infrastructure deployment on AWS built using Infrastructure as Code (IaC) principles.
+A secure, scalable, and automated cloud infrastructure deployment on AWS built using Infrastructure as Code (IaC) principles
 
 ## Overview
 
