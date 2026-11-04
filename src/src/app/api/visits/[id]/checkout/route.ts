@@ -30,9 +30,9 @@ function toVisit(row: VisitRow) {
 
 export async function POST(
   _req: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
-  const { id } = params;
+  const { id } = await params;
   const supabase = await createServiceClient();
   const { data: visit, error: fetchErr } = await supabase
     .from("visits")
