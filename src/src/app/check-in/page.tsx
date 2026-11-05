@@ -78,7 +78,7 @@ export default function CheckInPage() {
               href="/dashboard"
               className="px-3 py-2 rounded-app text-sm font-medium text-stone-600 hover:text-teal-600 hover:bg-white/60 transition-colors"
             >
-              Dashboard Auto Deploy
+              Dashboard
             </Link>
             <Link
               href="/packages"
